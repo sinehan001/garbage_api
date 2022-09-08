@@ -75,6 +75,6 @@ Garbage.find({floor: req.body.floor, garbage: req.body.garbage}, function (err, 
 });
 });
 
-app.listen(2000, () => {
+app.listen(process.env.PORT || 2000, () => {
     console.log("Server is Running On port 2000");
   });
