@@ -3,7 +3,7 @@ var app = express();
 var cors = require('cors');
 var mongoose = require("mongoose");
 const {ObjectId} = require('mongodb');
-mongoose.connect("mongodb+srv://sinehan001:%40Mongodb001@cluster0.3y9rlfp.mongodb.net/Users?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
